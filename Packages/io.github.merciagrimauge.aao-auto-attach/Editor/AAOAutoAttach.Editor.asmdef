@@ -1,0 +1,17 @@
+{
+  "name": "AAOAutoAttach.Editor",
+  "rootNamespace": "AAOAutoAttach.Editor",
+  "references": [
+    "AvatarPlacement.Editor",
+    "EditorEventHandlers.Editor",
+    "com.anatawa12.avatar-optimizer.runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "overrideReferences": true,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "allowUnsafeCode": false,
+  "noEngineReferences": false
+}
