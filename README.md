@@ -1,13 +1,14 @@
 # AAO Auto Attach
 
-新しく配置されたアバターPrefabのルートに、AAO Trace And Optimizeを既定設定で付与するUnity Editor拡張です。検知とハンドラ管理は[Unity Editor Event Handlers](https://github.com/MerciaGrimauge/unity-editor-event-handlers)を使用します。
+次のリポジトリとAPIを使用するUnity Editor拡張です。
 
-配布パッケージは `io.github.merciagrimauge.aao-auto-attach` 0.1.3です。VPMの依存としてEditor Event Handlers、Avatar Placement Condition、Avatar Optimizer（1.9.20以上・2.0.0未満）を宣言します。導入と依存解決はALCOM等のパッケージ管理ツールで行います。
+- [Unity Editor Event Handlers](https://github.com/MerciaGrimauge/unity-editor-event-handlers): `EditorEvents.Subscribe<AvatarPlaced>`、`IEventHandler<AvatarPlaced>`、`HandlerContext<AvatarPlaced>.AddComponent<T>`、`AvatarPlaced`。
+- [Avatar Optimizer](https://github.com/anatawa12/AvatarOptimizer): `Anatawa12.AvatarOptimizer.TraceAndOptimize`。
 
-AAOの公式Component APIの公開型を直接参照します。既存AAOの設定は変更しません。
+新しく配置されたアバターPrefabのルートに、AAOのTrace And Optimizeを既定設定で追加します。すでに付いている場合は何も変更しません。アバターの最適化をその場で実行する機能はありません。
 
-詳しい動作・必要なパッケージは[パッケージREADME](Packages/io.github.merciagrimauge.aao-auto-attach/README.md)を参照してください。
+パッケージIDは `io.github.merciagrimauge.aao-auto-attach` です。導入方法、依存パッケージ、動作の説明は[パッケージREADME](Packages/io.github.merciagrimauge.aao-auto-attach/README.md)を参照してください。
 
-Unity 2022.3向けです。共通ライブラリの識別子互換層とは別に、SDK・AAO・NDMFのUnity 6互換性を確認する必要があります。Unity 6でのSDK連携と実際の最適化・アップロードは未検証です。制御を返さないハンドラを強制終了する仕組みはありません。
+Unity 2022.3向けです。Unity 6でのSDK・AAO連携は未検証です。
 
-MIT。本ソフトウェアは現状のまま提供します。ライセンス条件はLICENSEを参照してください。パッケージにもLICENSEを同梱しています。SDKやAvatar Optimizerのコード・素材は同梱していません。
+ライセンスは[MIT](LICENSE)です。本ソフトウェアは現状のまま提供します。SDKやAvatar Optimizerのコード・素材は同梱していません。
