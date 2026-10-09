@@ -12,14 +12,14 @@ namespace AAOAutoAttach.Editor
 
         static AutomaticTraceAndOptimize()
         {
-            Registration = EditorEvents.Subscribe<AvatarPlaced>(new AttachHandler());
+            Registration = EditorEvents.Subscribe<AvatarAddedToScene>(new AttachHandler());
         }
 
-        private sealed class AttachHandler : IEventHandler<AvatarPlaced>
+        private sealed class AttachHandler : IEventHandler<AvatarAddedToScene>
         {
             public string Id => "io.github.merciagrimauge.aao-auto-attach.trace-and-optimize";
 
-            public HandlerResult Execute(HandlerContext<AvatarPlaced> context)
+            public HandlerResult Execute(HandlerContext<AvatarAddedToScene> context)
             {
                 context.CheckDeadline();
                 if (context.Root.TryGetComponent<TraceAndOptimize>(out _))

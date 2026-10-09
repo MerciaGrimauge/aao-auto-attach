@@ -6,7 +6,7 @@
 
 ### MerciaGrimaugeのリポジトリ
 
-- [Unity Editor Event Handlers](https://github.com/MerciaGrimauge/unity-editor-event-handlers): `EditorEvents.Subscribe<AvatarPlaced>`、`IEventHandler<AvatarPlaced>`、`HandlerContext<AvatarPlaced>.AddComponent<T>`、`AvatarPlaced`。
+- [Unity Editor Event Handlers](https://github.com/MerciaGrimauge/unity-editor-event-handlers): `EditorEvents.Subscribe<AvatarAddedToScene>`、`IEventHandler<AvatarAddedToScene>`、`HandlerContext<AvatarAddedToScene>.AddComponent<T>`、`AvatarAddedToScene`。
 
 ### 第三者のリポジトリ
 

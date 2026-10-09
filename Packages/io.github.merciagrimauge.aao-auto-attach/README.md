@@ -9,7 +9,7 @@
 | リポジトリ | 使用するAPI |
 | --- | --- |
 | [Unity Editor Event Handlers](https://github.com/MerciaGrimauge/unity-editor-event-handlers) | `EditorEvents.Subscribe<TEvent>`、`IEventHandler<TEvent>`、`HandlerContext<TEvent>.AddComponent<T>` |
-| 同リポジトリのAvatar Placement Condition | `AvatarPlacement.Editor.AvatarPlaced` |
+| 同リポジトリのAvatar Placement Condition | `AvatarPlacement.Editor.AvatarAddedToScene` |
 
 ### 第三者のリポジトリ
 
@@ -19,7 +19,7 @@
 
 ## 動作
 
-`AvatarPlaced`を受け取ると、配置されたアバターPrefabのルートにAAOのTrace And Optimizeを既定設定で追加します。すでに付いている場合は追加せず、既存の設定も変更しません。アバターの最適化をその場で実行する機能はありません。
+`AvatarAddedToScene`を受け取ると、配置されたアバターPrefabのルートにAAOのTrace And Optimizeを既定設定で追加します。すでに付いている場合は追加せず、既存の設定も変更しません。アバターの最適化をその場で実行する機能はありません。
 
 追加したコンポーネントはシーン上のPrefabインスタンスに残ります。シーンの保存は利用者が行ってください。
 
@@ -33,6 +33,8 @@
 | --- | --- |
 | Editor Event Handlers | `^0.3.0` |
 | Avatar Placement Condition | `^0.2.4` |
+
+Avatar Placement Conditionは、`AvatarAddedToScene`を公開する版が必要です。
 
 ### 第三者のパッケージ
 
